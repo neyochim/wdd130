@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon&family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poetsen+One&display=swap');
+
 #content {
     max-width: 1600px;
     margin: 0 auto;
@@ -6,6 +10,7 @@ nav a {
     text-align: center;
     color: #6a76e4;
     text-decoration: none;
+    padding: 35px;
 }
 
 #hero-msg h1, #hero-msg h4 {
@@ -23,7 +28,11 @@ main section {
     height: 725px;
 }
 body {
-    background-color: #fcfbfb; 
+    background-color: #fcfbfb;
+    font-family: Lato, "Nunito", sans-serif;
+    font-size: 22px;
+    margin: 0;
+    padding: 0; 
 }
 header {
     background-color: #011638; 
@@ -33,9 +42,13 @@ nav a:hover {
     color: #011638; 
 }
 .book, .join {
+    font-size: 18px;
     background-color: white;
     color: #011638;
     text-decoration: none;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
 }
 .book:hover, .join:hover {
     background-color: #192bc2;
@@ -45,23 +58,33 @@ nav a:hover {
     background-color: #f7f0b8; 
 }
 .msg {
-    background-color: #192bc2; 
+    background-color: #192bc2;
+    line-height: 1.5em;
+    padding: 35px;
 }
 footer {
     background-color: #011638;
-    color: #f5e663; 
+    color: #f5e663;
+    padding: 25px 50px;
+    margin-top: 200px; 
 }
 .home-title {
-    color: #011638; 
+    font-family:"Poetsen One", sans-serif;
+    font-size: 2em;
+    color: #011638;
+    margin-top: 10px; 
 }
 h4 {
     color: #011638; 
 }
 .msg h2 {
+    font-family:"Poetsen One", sans-serif;
     color: white; 
 }
 .msg p {
-    color: white; 
+    font-size: .8em;
+    color: white;
+    padding-bottom: 15px; 
 }
 footer a {
     color: #f5e663;
@@ -74,7 +97,8 @@ footer a:hover {
     width: 80px; 
 }
 .icon {
-    width: 80px; 
+    width: 80px;
+    padding-top: 10px; 
 }
 #hero-img {
     width: 100%; 
@@ -84,4 +108,22 @@ footer p {
 }
 footer p a:hover {
     text-decoration: underline;
+}
+h2 {
+    margin: 0;
+}
+#logo_link {
+    padding-top: 5px;
+}
+footer .social img {
+    padding-top: 15px; 
+}
+.rivers-card, .camping-card, .rapids-card {
+    margin: 200px 0;
+}
+.card-img {
+    border: 10px solid #d9c2a3;
+}
+main section img {
+    box-sizing: border-box;
 }
