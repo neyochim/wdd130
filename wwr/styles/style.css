@@ -158,6 +158,26 @@ nav {
     grid-row: 1/2;
     margin-top: 100px;
 }
+
+/* FAQ Page Hero Styling */
+.faq-page #hero-img {
+    border-radius: 0 0 20px 20px;
+}
+
+.faq-page #hero-msg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 0;
+    padding: 50px 20px;
+}
+
+.faq-page #hero-msg h1, .faq-page #hero-msg h4 {
+    text-align: center;
+}
+
 .home-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
