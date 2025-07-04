@@ -168,9 +168,9 @@ nav {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     margin-top: -100px;
-    height: 50vh;
-    min-height: 350px;
-    margin-bottom: -80px;
+    height: 40vh;
+    min-height: 300px;
+    margin-bottom: -120px;
 }
 
 .faq-page #hero-msg {
@@ -232,7 +232,7 @@ nav {
 #faq-content {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 10px 20px 50px 20px;
+    padding: 0 20px 50px 20px;
 }
 
 .faq-item {
