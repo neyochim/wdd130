@@ -168,8 +168,9 @@ nav {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     margin-top: -100px;
-    height: 100vh;
-    min-height: 500px;
+    height: 60vh;
+    min-height: 400px;
+    margin-bottom: -50px;
 }
 
 .faq-page #hero-msg {
@@ -231,7 +232,7 @@ nav {
 #faq-content {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 50px 20px;
+    padding: 30px 20px 50px 20px;
 }
 
 .faq-item {
@@ -378,9 +379,10 @@ nav {
 /* Media queries for FAQ page */
 @media screen and (max-width: 900px) {
     .faq-page #hero {
-        height: 70vh;
-        min-height: 400px;
+        height: 50vh;
+        min-height: 350px;
         margin-top: 0;
+        margin-bottom: -30px;
     }
     
     .faq-page #hero-msg {
