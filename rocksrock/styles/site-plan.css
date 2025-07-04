@@ -175,3 +175,29 @@ nav a:hover {
   border-top: 1px solid;
   border-right: 1px solid;
 }
+
+/* Content image sizing */
+img {
+  max-width: 300px;
+  height: auto;
+  margin: 10px auto;
+  display: block;
+}
+
+/* Logo image specific sizing */
+header img {
+  max-width: 200px;
+  height: auto;
+}
+
+/* Wireframe images - make them larger for readability */
+main h3 + img {
+  max-width: 600px;
+  height: auto;
+}
+
+/* Content section images - keep them moderate size */
+main p + img {
+  max-width: 250px;
+  height: auto;
+}
