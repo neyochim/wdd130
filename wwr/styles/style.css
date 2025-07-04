@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon&family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
-@import url('ht/* FAQ Page Styles */
-#faq-content {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px 20px 50px 20px;
-}fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poetsen+One&display=swap');
 
 #content {
     max-width: 1600px;
@@ -238,6 +233,13 @@ nav {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px 50px 20px;
+}
+
+/* FAQ Page Styles */
+#faq-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 20px 50px 20px;
 }
 
 .faq-item {
