@@ -35,7 +35,9 @@ body {
 header {
     background-color: #011638;
     display: grid;
-    grid-template-columns: 150px auto; 
+    grid-template-columns: 150px auto;
+    position: relative;
+    z-index: 10;
 }
 nav a:hover {
     background-color: white;
