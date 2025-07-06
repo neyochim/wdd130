@@ -1,0 +1,282 @@
+/* CSS for Rocks Rock Website - Wireframe Based Layout */
+@import url('https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Color Palette from Site Plan */
+:root {
+    --primary-color: #082D0F;
+    --secondary-color: #555B6E;
+    --accent1-color: #71F79F;
+    --accent2-color: #797270;
+    --heading-font: "Winky Sans", sans-serif;
+    --paragraph-font: "Open Sans", sans-serif;
+    --headline-color-on-white: #396E94;
+    --headline-color-on-color: white;
+    --paragraph-color-on-white: #396E94;
+    --paragraph-color-on-color: white;
+    --nav-link-color: #71F79F;
+    --nav-background-color: #555B6E;
+    --nav-hover-background-color: #396E94;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--paragraph-font);
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--paragraph-color-on-white);
+    background-color: white;
+}
+
+#content {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Header - Wireframe: Logo left, Nav right */
+header {
+    background-color: var(--nav-background-color);
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    align-items: center;
+    padding: 20px 40px;
+    position: relative;
+    z-index: 100;
+}
+
+#logo_link {
+    justify-self: start;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    max-width: 220px;
+    object-fit: contain;
+}
+
+nav {
+    justify-self: end;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--nav-link-color);
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 1.1em;
+    padding: 12px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--nav-hover-background-color);
+    color: var(--headline-color-on-color);
+}
+
+/* Hero Section - Wireframe: Full width image with overlay text */
+#hero {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+#hero-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#hero-msg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(8, 45, 15, 0.9);
+    color: var(--headline-color-on-color);
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+}
+
+.home-title, .page-title {
+    font-family: var(--heading-font);
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: var(--headline-color-on-color);
+}
+
+#hero-msg h4 {
+    font-size: 1.3em;
+    margin-bottom: 25px;
+    color: var(--accent1-color);
+}
+
+.button-box {
+    margin-top: 25px;
+}
+
+.adopt, .adopt-btn {
+    background-color: var(--accent1-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-family: var(--heading-font);
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.adopt:hover, .adopt-btn:hover {
+    background-color: var(--accent2-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Main Content Styles */
+main {
+    margin: 0 40px 50px 40px;
+}
+
+/* HOME PAGE - Wireframe: Two column layout with images and text */
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.welcome-msg, .why-rocks-card {
+    background-color: white;
+    border: 2px solid var(--accent2-color);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.welcome-msg h2, .why-rocks-card h2 {
+    font-family: var(--heading-font);
+    color: var(--headline-color-on-white);
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.welcome-img, .card-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 2px solid var(--accent2-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--headline-color-on-color);
+    text-align: center;
+    padding: 40px;
+    margin-top: 50px;
+}
+
+footer p {
+    margin-bottom: 10px;
+    font-family: var(--heading-font);
+}
+
+footer a {
+    color: var(--accent1-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 900px) {
+    header {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    nav {
+        justify-self: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    #hero-msg {
+        width: 95%;
+        padding: 30px;
+    }
+    
+    .home-title, .page-title {
+        font-size: 2em;
+    }
+    
+    main {
+        margin: 0 20px 50px 20px;
+    }
+    
+    .home-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .rock-profile, .care-section, .bonding-section, .benefits-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .rock-profile:nth-child(even) {
+        grid-template-columns: 1fr;
+    }
+    
+    .rock-profile:nth-child(even) .rock-img,
+    .rock-profile:nth-child(even) .rock-info {
+        order: initial;
+    }
+    
+    .bonding-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .bonding-section .bonding-img,
+    .bonding-section .bonding-content {
+        order: initial;
+    }
+    
+    .bonding-activities {
+        grid-template-columns: 1fr;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+}
