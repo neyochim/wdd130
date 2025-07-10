@@ -20,9 +20,29 @@
             </nav>
         </header>
         <div id="hero">
-            <div id="hero-box">
-                <img id="hero-img" src="images/legorock.jpg" alt="Dorm room with pet rocks">
-            </div> 
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="images/rock1.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="images/rock2.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="images/rock3.jpg" style="width:100%">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+            
             <section id="hero-msg">
                 <h1 class="home-title">Welcome to Rocks Rock!</h1>
                 <h4>Because Dorm Life Deserves Quiet Companionship</h4>
@@ -48,5 +68,39 @@
             <p><a href="site-plan-rocks-rock.html">Site Plan</a></p>
         </footer>
     </div>
+    
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+
+        // Auto-advance slides every 5 seconds
+        setInterval(function() {
+            plusSlides(1);
+        }, 5000);
+    </script>
 </body>
 </html>
