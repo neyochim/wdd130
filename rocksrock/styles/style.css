@@ -281,6 +281,99 @@ main {
     border: 2px solid var(--accent2-color);
 }
 
+/* MEET THE ROCKS PAGE - Wireframe: Grid layout with rock profiles */
+.rocks-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.intro-section {
+    text-align: center;
+    margin: 40px 0;
+    padding: 40px;
+    background-color: var(--accent1-color);
+    color: var(--primary-color);
+    border-radius: 10px;
+}
+
+.intro-section h2 {
+    font-family: var(--heading-font);
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.rock-profile {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+    margin: 40px 0;
+    padding: 30px;
+    background-color: white;
+    border: 2px solid var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.rock-profile:nth-child(even) {
+    grid-template-columns: 1fr 300px;
+}
+
+.rock-profile:nth-child(even) .rock-img {
+    order: 2;
+}
+
+.rock-profile:nth-child(even) .rock-info {
+    order: 1;
+}
+
+.rock-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid var(--accent2-color);
+}
+
+.rock-info h3 {
+    font-family: var(--heading-font);
+    color: var(--headline-color-on-white);
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.traits {
+    margin-top: 20px;
+}
+
+.trait {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    margin-right: 10px;
+    display: inline-block;
+    margin-bottom: 8px;
+    font-family: var(--heading-font);
+}
+
+.visit-section {
+    text-align: center;
+    margin: 50px 0;
+    padding: 40px;
+    background-color: var(--primary-color);
+    color: var(--headline-color-on-color);
+    border-radius: 10px;
+}
+
+.visit-section h2 {
+    font-family: var(--heading-font);
+    color: var(--accent1-color);
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
 /* Footer */
 footer {
     background-color: var(--primary-color);
