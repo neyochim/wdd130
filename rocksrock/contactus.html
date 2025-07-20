@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Rocks Rock | Get In Touch</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body class="contact-page">
+    <div id="content">
+        <header>
+            <a id="logo_link" href="index.html">
+                <img class="logo" src="images/logo.png" alt="Rocks Rock Logo">
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="meet-the-rocks.html">Meet the rocks</a>
+                <a href="care-and-companionship.html">Care & Companionship</a>
+                <a href="contactus.html">Contact Us</a>
+            </nav>
+        </header>
+        <div id="hero">
+            <div id="hero-box">
+                <img id="hero-img" src="images/computerrock.jpg" alt="Pet rock at computer ready to help">
+            </div>
+            <section id="hero-msg">
+                <h1 class="page-title">Contact Us</h1>
+                <h4>Ready to Find Your Perfect Rock Companion?</h4>
+            </section>
+        </div>
+        <main class="contact-main">
+            <div id="feedback"></div>
+            
+            <section class="contact-info">
+                <h2>Get in Touch</h2>
+                <p>Have questions about adopting a pet rock? Need advice on rock care? Want to share your rock's success story? We'd love to hear from you! Our rock specialists are here to help you find the perfect quiet companion for your dorm life.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <h3>📧 Email</h3>
+                        <p>hello@rocksrock.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>📱 Phone</h3>
+                        <p>(555) ROCK-123</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>🏢 Office Hours</h3>
+                        <p>Monday - Friday: 9am - 6pm<br>
+                        Saturday: 10am - 4pm<br>
+                        Sunday: Closed (rocks are resting)</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-form-section">
+                <h2>Send Us a Message</h2>
+                <form action="/my-handling-form-page" method="post" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="user_name" required />
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mail">Email:</label>
+                        <input type="email" id="mail" name="user_email" required />
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone (optional):</label>
+                        <input type="tel" id="phone" name="user_phone" />
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="interest">What brings you here?</label>
+                        <select id="interest" name="user_interest">
+                            <option value="">Select an option...</option>
+                            <option value="adoption">Looking to adopt a rock</option>
+                            <option value="care">Need care advice</option>
+                            <option value="story">Want to share my rock's story</option>
+                            <option value="partnership">Business partnership</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="msg">Message:</label>
+                        <textarea id="msg" name="user_message" rows="6" placeholder="Tell us about your dorm life, what kind of rock companion you're looking for, or any questions you have..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter" />
+                        <label for="newsletter">Yes, I'd like to receive rock care tips and adoption updates!</label>
+                    </div>
+                    
+                    <div class="button-group">
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="location-section">
+                <h2>Visit Our Rock Sanctuary</h2>
+                <p>Want to meet our rocks in person? Visit our cozy rock sanctuary where you can interact with potential companions before making your choice.</p>
+                
+                <div class="location-details">
+                    <p><strong>📍 Address:</strong><br>
+                    123 Quiet Companion Lane<br>
+                    Dorm District, College Town 12345</p>
+                    
+                    <p><strong>🚗 Directions:</strong><br>
+                    Located just off campus, near the student center. Look for the building with the peaceful rock garden out front!</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>Rocks Rock &copy; 2025 - Nathan Yochim</p>
+            <p><a href="site-plan-rocks-rock.html">Site Plan</a></p>
+        </footer>
+    </div>
+
+    <script>
+        // get the feedback div element so we can do something with it.
+        const feedbackElement = document.getElementById('feedback');
+        // get the form so we can read what was entered in it.
+        const formElement = document.querySelector('.contact-form');
+        // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+        formElement.addEventListener('submit', function(e) {
+            // stop the form from doing the default action.
+            e.preventDefault();
+            // set the contents of our feedback element to a message letting the user know the form was submitted successfully.
+            feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for reaching out. We\'ll get back to you soon with rock recommendations and answers to your questions!';
+            // make the feedback element visible.
+            feedbackElement.style.display = "block";
+            // add a class to move everything down so our message doesn't cover it.
+            document.body.classList.toggle('moveDown');
+            
+            // Optional: Clear the form after submission
+            formElement.reset();
+        });
+    </script>
+</body>
+</html>
